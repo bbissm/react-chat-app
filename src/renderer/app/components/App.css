@@ -1,0 +1,260 @@
+/* General Body and Font Settings */
+body {
+  position: relative;
+  color: #333; /* Darker text for readability */
+  height: 100vh;
+  background: linear-gradient(
+    200.96deg,
+    #fedc2a -29.09%,
+    #dd5789 51.77%,
+    #7a2c9e 129.35%
+  );
+  font-family: 'Arial', sans-serif; /* More professional font */
+  overflow: hidden; /* Removed Y overflow hidden for full page use */
+  display: flex;
+  margin: 0; /* Remove default margin */
+}
+
+#root {
+  display: flex;
+  width: 100%;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Styling for Interactive Elements: Button */
+button {
+  background-color: #ffffff;
+  color: #333; /* Text color for buttons to improve contrast */
+  padding: 8px 16px;
+  border-radius: 5px; /* Less pronounced border-radius for a modern look */
+  border: 1px solid #ccc; /* Subtle border */
+  font-size: 0.9rem; /* Adjusted for a professional look */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtler shadow */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smoother transition */
+  cursor: pointer;
+}
+
+button:hover, button:focus {
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* Enhanced shadow on hover/focus */
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit; /* Ensures links inherit body text color */
+  margin: 5px;
+}
+
+a:hover {
+  text-decoration: underline; /* Clear indication of hover state */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px; /* Adjusted width for balance */
+  background-color: #f8f8f8; /* Lighter gray for a cleaner look */
+  height: 100vh;
+  overflow-y: auto;
+  border-right: 1px solid #ddd; /* Adds a subtle division */
+  position: relative;
+}
+
+/* Chat Item Styling */
+.chat-item {
+  padding: 12px;
+  border-bottom: 1px solid #eee; /* Lighter border for less visual weight */
+  cursor: pointer;
+  transition: background-color 0.2s; /* Smooth background color transition */
+}
+
+.chat-item:hover {
+  background-color: #f0f0f0; /* Highlight item on hover */
+}
+
+/* Main Content Styles */
+.main-content {
+  flex-grow: 1;  /* Ensures it fills the space beside the sidebar */
+  background-color: #fff; /* Light background for the content area */
+  color: #333; /* Darker text for better readability */
+  overflow-y: auto; /* Allows scrolling within the main content area */
+  padding: 20px; /* Provides spacing inside the main content */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Call Item Styling - Adjusted for consistency and clarity */
+.call-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 10px 0; /* Gives space between call items */
+  background-color: #f9f9f9; /* Slight background color for each item */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  transition: background-color 0.2s; /* Smooth transition for hover effect */
+}
+
+.call-item:hover {
+  background-color: #e9e9e9; /* Lighter color on hover for interaction feedback */
+}
+
+/* Enhancing readability and visual hierarchy in call items */
+.call-item span {
+  margin: 0 5px; /* Spacing for content within call items */
+  font-size: 0.9rem; /* Smaller font size for cleaner layout */
+  color: #555; /* Slightly lighter text for less visual fatigue */
+}
+
+.call-item span.name {
+  font-weight: bold; /* Emphasizes the name */
+  color: #333; /* Darker color for important info */
+}
+
+.call-item span.date {
+  color: #777; /* Subdued color for less critical information */
+}
+
+/* Navbar Enhancement for better visual integration */
+.navbar {
+  border-top: 1px solid #ddd; /* Defines a clear top border for separation */
+  padding: 10px 20px; /* Adequate padding for touch targets and spacing */
+}
+
+/* Tab Styling Adjustment for a more unified look */
+.tab {
+  padding: 10px 15px;
+  margin-right: 5px; /* Adds space between tabs */
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid transparent; /* Ready for active state */
+  transition: all 0.3s ease; /* Smooth transitions for interaction */
+}
+
+.tab:hover {
+  border-bottom: 2px solid #007bff; /* Color transition on hover */
+}
+
+.tab.active {
+  font-weight: bold;
+  border-bottom: 2px solid #007bff; /* Active state indication */
+}
+
+
+.chat {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff; /* Optional: sets background color */
+  border: 1px solid #ccc; /* Optional: adds a border */
+}
+
+.chat .messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px; /* Space between messages and input area */
+}
+
+.chat .messages p {
+  margin: 10px;
+  background-color: #e9eff1; /* Light blue background for messages */
+  padding: 10px;
+  border-radius: 10px; /* More pronounced border-radius for a bubble look */
+  word-wrap: break-word; /* Ensure long words do not overflow */
+}
+
+.chat .input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ccc; /* Separates input area from messages */
+}
+
+.chat input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px; /* Space between input and button */
+}
+
+.chat button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green background for send button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat button:hover {
+  opacity: 0.9; /* Slight fade on hover for button */
+}
+
+.chat .chat-header {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.chat .messages {
+  padding: 10px;
+  overflow-y: auto;
+  flex-direction: column-reverse;
+  display: flex;
+}
+
+.chat .input-area {
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.chat input[type="text"], .chat button {
+  padding: 8px;
+  margin: 5px;
+}
+
+.chat button {
+  cursor: pointer;
+}
+
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* High z-index to overlay the app */
+}
+
+.settings-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+}
+
+.openSettingsBtn {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin: 0 auto;
+}

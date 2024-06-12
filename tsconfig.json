@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es2022",
+    "module": "commonjs",
+    "lib": ["dom", "es2022"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "outDir": ".erb/dll",
+    "baseUrl": ".", // This sets the base directory for non-relative module imports
+    "paths": {
+      "*": ["src/*"], // Adjust according to your source directory structure
+      "components/*": ["src/app/components/*"] // Example for component aliasing
+    }
+  },
+  "exclude": ["test", "release/build", "release/app/dist", ".erb/dll"]
+}
