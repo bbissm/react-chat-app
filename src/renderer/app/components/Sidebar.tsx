@@ -43,9 +43,10 @@ function Sidebar({ setActiveChatId, setView }: SidebarProps) {
   const addChat = async (chatName) => {
     console.log('Add chat clicked', chatName);
     if (!chatName) return;
-    addMember(chatName);
+    await addMember(chatName);
 
     const loadedMembers = await getMembers();
+    console.log("Loaded members", loadedMembers);
     setMembers(loadedMembers);
   };
 
