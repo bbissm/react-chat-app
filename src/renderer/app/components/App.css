@@ -224,7 +224,7 @@ a:hover {
   cursor: pointer;
 }
 
-.settings-overlay {
+.settings-overlay, .dialog-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -237,7 +237,7 @@ a:hover {
   z-index: 1000; /* High z-index to overlay the app */
 }
 
-.settings-content {
+.settings-content, .dialog-content {
   background: white;
   padding: 20px;
   border-radius: 5px;

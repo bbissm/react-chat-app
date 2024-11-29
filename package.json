@@ -96,6 +96,8 @@
     }
   },
   "dependencies": {
+    "@fluentui/react-components": "^9.56.3",
+    "@fluentui/react-icons": "^2.0.266",
     "electron-debug": "^3.2.0",
     "electron-log": "^4.4.8",
     "electron-updater": "^6.1.4",
@@ -171,7 +173,7 @@
     "webpack-merge": "^5.9.0"
   },
   "build": {
-    "productName": "ElectronReact",
+    "productName": "anOne",
     "appId": "org.erb.ElectronReact",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
